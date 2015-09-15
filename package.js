@@ -12,6 +12,6 @@ Package.onUse(function (api) {
     'templating',
     'kriegslustig:redact'
   ])
-  api.addFiles(['paragraph.js'])
   api.addFiles(['paragraph.html', 'paragraph.css'], 'client')
+  api.addFiles(['paragraph.js'])
 })

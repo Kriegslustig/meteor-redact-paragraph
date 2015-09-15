@@ -1,6 +1,10 @@
 Redact.addModule(
   'paragraph',
-  Template.redactParagraph,
+  (
+    typeof Template != 'undefined'
+      ? Template.redactParagraph
+      : ''
+  ),
   {
     label: 'Paragraph',
     icon: '/redactParagraph.svg',
