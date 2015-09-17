@@ -1,6 +1,6 @@
 Package.describe({
   name: 'kriegslustig:redact-paragraph',
-  version: '0.0.0'
+  version: '0.0.0',
   documentation: 'README.md',
   repository: 'https://github.com/Kriegslustig/meteor-redact-paragraph.git',
   description: 'A extension that adds a parapgraph module to Redact '

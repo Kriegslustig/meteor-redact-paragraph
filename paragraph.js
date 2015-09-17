@@ -13,3 +13,23 @@ Redact.addModule(
     }
   }
 )
+
+if(Meteor.isClient) {
+  Template.redactParagraph.events({
+    'keydown .redactParagraph': function (e) {
+      if(
+        e.keyCode == 8
+        && (
+          e.currentTarget.innerHTML.length < 1
+          || e.currentTarget.innerHTML === '<br>'
+        )
+      ) {
+        Redact.removeElement(
+          Template.parentData(1)._id,
+          '_draft',
+          Template.currentData()._id
+        )
+      }
+    }
+  })
+}
