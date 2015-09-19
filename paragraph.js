@@ -1,4 +1,4 @@
-Redact.addModule(
+redactParagraph = Redact.addModule(
   'paragraph',
   (
     typeof Template != 'undefined'
@@ -24,7 +24,8 @@ if(Meteor.isClient) {
           || e.currentTarget.innerHTML === '<br>'
         )
       ) {
-        Redact.removeElement(
+        redactParagraph.removeElement(
+          Template.currentData().collection
           Template.parentData(1)._id,
           '_draft',
           Template.currentData()._id
