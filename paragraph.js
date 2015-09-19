@@ -25,7 +25,7 @@ if(Meteor.isClient) {
         )
       ) {
         redactParagraph.removeElement(
-          Template.currentData().collection
+          Template.currentData().collection,
           Template.parentData(1)._id,
           '_draft',
           Template.currentData()._id
